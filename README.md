@@ -1,1 +1,1 @@
-# Yaroa-Power
+# Tasty-Yaroa
