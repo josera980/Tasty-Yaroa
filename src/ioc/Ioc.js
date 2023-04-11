@@ -1,37 +1,32 @@
 class Ioc {
-    constructor() {
-        this.services = {};
+  constructor() {
+    this.services = {};
+  }
+
+  register(serviceName, service) {
+    if (!serviceName) {
+      throw new Error('Please verify service name.');
     }
 
-    register(serviceName, service) {
-
-        if (!serviceName) {
-            throw new Error("Please verify service name.");
-        }
-
-        if (this.services[serviceName]) {
-            throw new Error("Service already created.");
-        }
-
-        this.services[serviceName] = service;
-        
+    if (this.services[serviceName]) {
+      throw new Error('Service already created.');
     }
 
-    getService(serviceName) {
-        if (!serviceName) {
-            throw new Error("Please verify service name.");
-        }
+    this.services[serviceName] = service;
+  }
 
-        if (!this.services[serviceName]) {
-            throw new Error("Service not found.");
-        }
-
-        return this.services[serviceName];
-        
+  getService(serviceName) {
+    if (!serviceName) {
+      throw new Error('Please verify service name.');
     }
 
+    if (!this.services[serviceName]) {
+      throw new Error('Service not found.');
+    }
+    return this.services[serviceName];
+  }
 }
 
-let iocInstance = Object.freeze(new Ioc());
+const iocInstance = Object.freeze(new Ioc());
 
 export default iocInstance;

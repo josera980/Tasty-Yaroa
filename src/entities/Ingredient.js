@@ -1,7 +1,7 @@
 export class Ingredient {
-    constructor(id, name, stock) {
-        this.id = id;
-        this.name = name;
-        this.stock = stock;
-    }
+  constructor(id, name, stock) {
+    this.id = id;
+    this.name = name;
+    this.stock = stock;
+  }
 }
