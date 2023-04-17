@@ -1,4 +1,4 @@
-class Ioc {
+export class Ioc {
   constructor() {
     this.services = {};
   }
